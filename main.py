@@ -1,6 +1,8 @@
+"""Module for GUI."""
 import tkinter as tk
 
 def somma_numeri():
+    """Function to calculate ..."""
     try:
         numero1 = float(entry_numero1.get())
         numero2 = float(entry_numero2.get())
