@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}-latest
     strategy:
       matrix:
-        os: [Windows] # [Ubuntu, Windows, macOS]
+        os: [ubuntu, windows, macOS]
         python-version: ["3.10"]
     steps:
     - uses: actions/checkout@v4
@@ -31,4 +31,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
+        name: binary-${{ matrix.os }}-${{ matrix.python-version }}
         path: dist/*
